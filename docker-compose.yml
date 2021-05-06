@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  nest_mongo_backend:
+    container_name: nest_mongo_backend
+    image: ckusek1/nest-mongo:0.0.3
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      - EXTERNAL_PORT=3000
+      - MONGO_ATLAS_USER=chris_kusek44
+      - MONGO_ATLAS_PASSWORD=Vijita001*
+      - MONGO_ATLAS_DB=nest-mongo-docker-db
